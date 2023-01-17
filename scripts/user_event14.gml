@@ -312,7 +312,7 @@ with phone{
 }
 
 initTip("Phone Controls", true);
-initWords(muno_char_name + ",");
+initWords( "Bowser,");
 initWords("Thank you for your purchase of a MunoPhone Touch! Here are a couple of handy tips to get you started with your new smart device:");
 initHeader("Sleep Mode");
 initSection("With the phone open, pressing Special goes to the Home Screen, and then pressing it again closes the phone.");

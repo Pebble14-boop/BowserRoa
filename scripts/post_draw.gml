@@ -3,14 +3,21 @@
 muno_event_type = 4;
 user_event(14);
 
+if attack == AT_NSPECIAL && (get_player_color(player) == 0){
 
+	if(window_timer >= 5 && !special_down) || fire_charge >= 20{
+		if(fire_charge >= 20){
 
+		set_hitbox_value(AT_NSPECIAL, 1, HG_PROJECTILE_SPRITE, sprite_get("nspecial_proj_big_corrected"));
+		set_hitbox_value(AT_NSPECIAL, 1, HG_PROJECTILE_MASK, -1);
+		}else{
+	
+		set_hitbox_value(AT_NSPECIAL, 1, HG_PROJECTILE_SPRITE, sprite_get("nspecial_proj_small_corrected"));
+		set_hitbox_value(AT_NSPECIAL, 1, HG_PROJECTILE_MASK, -1);
 
-
-
-
-
-
+		}
+	}
+}
 
 
 #define rectDraw(x1, y1, width, height, color)

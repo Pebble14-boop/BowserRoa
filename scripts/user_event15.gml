@@ -28,7 +28,7 @@ Set parameters that are used by the CSS drawing code.
 #define CORE_css_draw
 
 // The number of alt costumes your char has, up to 32.
-num_alts = 7;
+num_alts = 30;
 
 // Whether or not to display a name for each alt.
 use_alt_names = true;
@@ -42,12 +42,36 @@ alt_ui_recolor = 0;
 // The list of names for the alts, if enabled.
 alt_names = [
 	"Vanilla",
+	"Color 1",
+	"Color 2",
+	"Color 3",
+	"SSBU/4 Brown",
+	"SSBU/4 Yellow",
+	"SSBU/4 Red",
+	"SSBU/4 Blue",	
+	"SSBU/4 Gray",
+	"Melee/Brawl Red",
+	"Melee/Brawl Blue",
+	"Melee/Brawl Black",
+	"Classic",
+	"Giga Bowser",
 	"Dark Bowser",
+	"Dry Bowser",
+	"64",
 	"Midbus",
-	"Mint",
-	"gray",
+	"Ultimate Koopa",
+	"Fury Bowser",
+	"*Dark* Bowser",
 	"Sol Badguy",
 	"Justice",
+    "Godzilla",
+    "Im the coolest",
+	"Iron Tager",
+	"Susanoo",
+	"Broly",
+	"Bowletta",
+	"Kragg",
+	"Villains of Aether",
 	];
 
 
@@ -170,46 +194,33 @@ so that things like page breaks can work properly.
 
 #define CORE_tips
 
-initTip("NSpecial: Kamehameha");
-initWords("This Sandbert's NSpecial is completely different from the normal version of the character: it's Goku's Kamehameha!");
-initWords("The longer it's charged, the more distance it travels. The more distance it has left to travel by the time it reaches the enemy, the more damage and knockback it deals.");
-initWords("If two Kamehamehas clash, you'll get into a beam struggle! Mash B to overpower your opponent.");
-initImage_ext(sprite_get("nspecial"), -4, fa_right, -1, 1, true, c_white, 1, true, noone, noone, noone, noone);
-initImage_ext(sprite_get("nspecial"), -4, fa_left, 1, 1, true, c_white, 1, false, noone, noone, noone, noone);
+initTip("NSpecial: Flame Breath");
+initWords("This move has been changed from his smash bros nspecial, instead of flame breath he has a fireball he can charge up now!");
+initImage_ext(sprite_get("nspecial"), 6, fa_left, 1, 1, true, c_white, 1, true, 194, 200, 80, 30);
+initImage_ext(sprite_get("nspecial_proj_small"),  -6, fa_right, 1, 1, true, c_white, 1, false, 90, 270, 40, 60);
+initWords("The longer it's charged, the slower it travels. The payoff to this however is that the projectile is more mighty.");
+initImage_ext(sprite_get("nspecial"), 6, fa_left, 1, 1, true, c_white, 1, true, 194, 200, 90, 20);
+initImage_ext(sprite_get("nspecial_proj_big"),  -6, fa_center, 1, 1, true, c_white, 1, false, 210, 70, 40, 50);
+initWords("Bowser cannot store the fireball inside to use it later, however he can jump cancel while charging.");
 
-initTip("FSpecial: Sandbert Delusion");
-initWords("Just like vanilla Sandbert, you can shorten the FSpecial by pressing B at the correct moment.");
-initWords("It's handy as a mixup when recovering!");
-initImage_ext(sprite_get("fspecial"), -4, fa_center, 1, 1, true, c_white, 1, false, noone, noone, noone, noone);
+initTip("FSpecial: Sliding Haymaker");
+initWords("Borrowing from the Mario and Luigi series, Bowser charges forward with a big punch!.");
+initImage_ext(sprite_get("fspecial"), 8, fa_center, 1, 1, true, c_white, 1, false, 100, 100, 90, 30);
+initWords("When you hit an enemy, Bowser and his opponent will bounce up in the air, making it useful for stuff like combos and securing stocks");
+initImage_ext(sprite_get("fspecial"), 12, fa_center, 1, 1, true, c_white, 1, false, 100, 100, 80, 40);
+initWords("Remember:You can only use it once in the air, so don't think about chaining multiple fspecials with eachother.");
 
-initTip("USpecial: Forbidden Flight");
-initWords("USpecial is significantly toned down from regular Sandbert: its flight has a set, short duration, and you're forced to end with the big hit.");
-initWords("On the bright side, you can now cancel the move into a wall jump! Also, its finishing hit is just as strong as before.");
-initImage_ext(sprite_get("uspecial"), -4, fa_center, 1, 1, true, c_white, 1, false, noone, noone, noone, noone);
 
-initTip("DSpecial: Hexagon of Power");
-initWords("Sandbert's DSpecial can be canceled into a jump, but only if you successfully hit an opponent.");
-initWords("It's useful for combos, but maybe not as punish-safe as you'd expect based on its appearance.");
+initTip("DSpecial: Koopa Capture");
+initWords("Replacing his somersault grab, his grab has been reverted back to his melee/brawl variant.");
+initWords("Like the original, theres only 2 throws, except in this game it's moreso similar to Clairens grab, so it defaults to fthrow if you don't press anything.");
 initImage_ext(sprite_get("dspecial"), -4, fa_center, 1, 1, true, c_white, 1, false, noone, noone, noone, noone);
 
-initTip("FStrong: Burning Dropkick");
-initWords("During the charge of FStrong, Sandbert slides as if on ice. Get a running start to ambush a foe!");
-initImage_ext(sprite_get("fstrong"), -4, fa_center, 1, 1, true, c_white, 1, false, noone, noone, noone, noone);
-	
-initTip("Sandbert's Lore");
-initWords_ext("Chapter 1", fa_center, c_gray, 0, false);
-initWords("Sandbert, a son of the ruling family of the Firelands, is an experienced and hardened warrior. He has fought many wars for the Fire Capital, a bellicose nation that constantly seeks to expand its influence over neighbouring lands. His courage in battle has made him a hero among his people.");
-initWords("However, his straightforward character and unquestioning allegiance to the Fire Nation blind him at times. He is a reliable general on the field, but naive to the larger politics of Aether. In battle, Sandbert is equally forthright; he uses no weapons except for his razor-sharp claws and ability to control flame.");
-initWords_ext("Chapter 2", fa_center, c_gray, 0, false);
-initWords("When he first arrived in Water Town, the merchant capital of Aether, Sandbert was considered a dangerous nuisance and a criminal. Sandbert is a playful trickster, notorious for escaping even the most precarious of situations.");
-initWords("However, while the Water Merchants denounce Sandbert in public, they do not hesitate to call upon him when they need a situation dealt with quietly. Sandbert is sly and can infiltrate even the most secure strongholds. He can transform into water and confuse enemies with a spray of bubbles, making him the perfect candidate for stealth assignments.");
-initWords_ext("Chapter 3", fa_center, c_gray, 0, false);
-initWords("The youngest trainee in the history of the Air Academy, Sandbert has never lived by anyone's rules but his own. After graduating at the top of his class, he joined the Air Armada, the military force of Air Nation.");
-initWords("Within a year, Sandbert became renowned not just in Air Nation but across Aether as a fierce and unpredictable figher. However, among his superiors, he is more infamous for his brashness and arrogance than for his daring deeds. Currently an Aerial Ace for the Air Armada, Sandbert is wrecking havoc among the Armada's enemies and generals alike.");
-initWords_ext("Chapter 4", fa_center, c_gray, 0, false);
-initWords("Sandbert is a defender of the colossal Aetherian Forest. Deliberate and loyal, he is one of the infamous Wall Runners who patrol the Rock Wall. From their position atop the Wall, Sandbert and his fellow Runners defend both sides of the rock face and the forest below.");
-initWords("While normally slow because of their massive bodies, Wall Runners can curl up into balls and traverse the Wall at high speeds. Unlike other Wall Runners, Sandbert has the legendary ability to control the earth with his will. When in peril, Sandbert can summon the earth to aid him, and he repairs the Wall when it is under siege.");
-
+initTip("Secret Taunts");
+initWords("Press some directions and taunt at the same time, and bowser will do different taunts, some you might recognize.");
+initWords("Keep these a secret, I think it'd be way cooler if people saw these for the first time after getting hit by a cool combo.");
+initWords("Also a cool little thing that im not gonna try to get rid of is if you're doing his default taunt and press a direction, he'll actually cancel into the other taunts");
+initImage_ext(sprite_get("taunt"), -6, fa_center, 1, 1, true, c_white, 1, false, noone, noone, noone, noone);
 
 
 /*
@@ -645,7 +656,7 @@ otto_bobblehead_sprite = sprite_get("_pho_example_bobble_head");
 otto_bobblebody_sprite = sprite_get("_pho_example_bobble_body");
 
 // Steve death message.
-steve_death_message = "Steve got canceled on Twitter";
+steve_death_message = "Steve felt Bowser's fire breath";
 
 // Link spear. (determines which spear your char will drop the first time)
 link_spear_drop = 3;
