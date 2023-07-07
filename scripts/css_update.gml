@@ -1,0 +1,1 @@
+alt_cur = get_player_color("alt_fix" in self? alt_fix: player);
